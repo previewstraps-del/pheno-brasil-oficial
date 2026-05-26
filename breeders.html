@@ -3,7 +3,7 @@
 
 <script type="module">
     // Ao carregar a página, busca todos os usuários com tipo 'breeder'
-    const q = query(collection(db, "users"), where("tipo", "==", "breeder"));
+    const q = query(collection(db, "users"), where("role", "==", "breeder"));
     const snapshot = await getDocs(q);
     
     snapshot.forEach(doc => {
